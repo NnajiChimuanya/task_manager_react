@@ -60,7 +60,7 @@ function App() {
         <div className='form'>
           <form onSubmit={handleSubmit}>
             
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g read s" className='input'/>
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g read a book" className='input'/>
             <button className='submit-btn' type="submit"> {isEditing ? "Edit Task" : "Add Task"} </button>
           </form>
         </div>
