@@ -46,6 +46,10 @@ function App() {
     setList(newItems)
   }
 
+  const clearItems = () => {
+    setList([])
+  }
+
  return (
    <div className="container">
      <form onSubmit={handleSubmit}>
@@ -54,8 +58,17 @@ function App() {
        <button type="submit"> {isEditing ? "Edit Task" : "Add Task"} </button>
       </form>
       <div>
-        { list && <List items={list} editItem={editItem} deleteItem={deleteItem} />}
+        { 
+        list.length > 0 && (
+          <div className='items'>
+            <List items={list} editItem={editItem} deleteItem={deleteItem} />
+            <button onClick={clearItems}> Clear list </button>
+          </div>
+        )
+        
+        }
       </div>
+     
    </div>
  )
 }
