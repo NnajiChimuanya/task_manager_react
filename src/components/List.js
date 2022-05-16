@@ -7,11 +7,11 @@ export default function List({items, editItem, deleteItem }) {
     {items.map((item) => {
         const {id, name} = item
         return(
-          <article key={id}>
-              <h3> {name} </h3>
+          <section key={id}>
+              <p className='itemName'> {name} </p>
               <button onClick={() => editItem(id)}> <AiFillEdit /> </button>
               <button onClick={() => deleteItem(id)}> <AiFillDelete /> </button>
-          </article>
+          </section>
         )
     })}
     </>

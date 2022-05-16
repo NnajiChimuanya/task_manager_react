@@ -50,26 +50,37 @@ function App() {
     setList([])
   }
 
- return (
-   <div className="container">
-     <form onSubmit={handleSubmit}>
-       <h2> Task manager </h2>
-       <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
-       <button type="submit"> {isEditing ? "Edit Task" : "Add Task"} </button>
-      </form>
-      <div>
-        { 
-        list.length > 0 && (
-          <div className='items'>
-            <List items={list} editItem={editItem} deleteItem={deleteItem} />
-            <button onClick={clearItems}> Clear list </button>
+  return (
+    <div className="container">
+      <div className='main'>
+        <div className='title'>
+          <h2> Task manager </h2>
+        </div>
+
+        <div className='form'>
+          <form onSubmit={handleSubmit}>
+            
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g read s" className='input'/>
+            <button className='submit-btn' type="submit"> {isEditing ? "Edit Task" : "Add Task"} </button>
+          </form>
+        </div>
+        <div>
+            { 
+            list.length > 0 && (
+              <div className='items'>
+               
+                <List items={list} editItem={editItem} deleteItem={deleteItem} />
+                <div className='clear'>
+                  <button onClick={clearItems}> Clear list </button>
+                </div>
+
+              </div>
+            )
+            
+            }
           </div>
-        )
-        
-        }
       </div>
-     
-   </div>
+    </div>
  )
 }
 

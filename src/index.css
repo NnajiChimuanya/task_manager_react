@@ -1,15 +1,82 @@
 body {
-    background-color: aqua;
+    background-color: hsl(210, 36%, 96%);
+    color: hsl(209, 61%, 16%);
+
+}
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+.main{
+    background-color: white;
+    width: 300px;
+    height: auto;
+    padding: 15px;
+}
 
+.title {
+    display : flex;
+    justify-content: center;
+}
+
+form {
+    display: flexbox;
+}
+
+
+.input {
+    padding: 0.25rem;
+    padding-left: 1rem;
+    background: hsl(210, 36%, 96%);
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-color: transparent;
+    font-size: 1rem;
+    flex: 1 0 auto;
+    color: hsl(205, 78%, 60%);
+}
+
+.input::placeholder {
+    font-family: var(--ff-secondary);
+    color: hsl(205, 78%, 60%);
+}
+
+.submit-btn {
+    background: hsl(205, 86%, 81%);
+    border-color: transparent;
+    flex: 0 0 5rem;
+    display: grid;
+    align-items: center;
+    padding: 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: var(--radius);
+    cursor: pointer;
+    content:  hsl(205, 78%, 60%);
+    transition: all 0.3s linear;
+    font-size: 0.85rem;
+}
+
+.submit-btn:hover {
+    background: hsl(205, 78%, 60%);
+    color: #fff;
+}
 
 .article {
     display: flex;
     justify-content: space-between;
     
+}
+
+.itemName {
+    display: inline-block;
+}
+
+.clear {
+    display : flex;
+    justify-content: center;
 }
